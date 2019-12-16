@@ -58,7 +58,7 @@ group :test do
 end
 
 gem 'haml-rails'
-gem 'bootstrap-sass', '~>3.3.6'
+gem 'bootstrap-sass', '~>3.4.1'
 gem 'modernizr-rails'
 gem 'rails-controller-testing'
 gem 'devise'
