@@ -1,0 +1,49 @@
+<br>
+<br>
+  <%# Shows the data entry %>
+<p>
+    <%# Original song title %>
+  <b><%= t('.title') %></b>
+  <%= @ogsong.title %>
+</p>
+<p>
+    <%# Artist of original song %>
+  <b><%= t('.artist') %></b>
+  <%= @ogsong.artist %>
+</p>
+<p>
+    <%# Lyrics of original song %>
+  <b><%= t('.lyrics') %></b>
+  <%= @ogsong.lyrics %>
+</p>
+<p>
+    <%# Name of the song producer %>
+<b><%= t('.producer') %></b>
+<% @ogsong.producers.each do |producer| %>
+<%= producer.name %>
+<% end %>
+</p>
+<p><%= t('.sample') %></p>
+<table>
+  <tbody>
+      <%# Prints each song that has sampled from the original song %>
+    <% @ogsong.samples.each do |sample| %>
+    <tr id = "sample_<%= sample.id %>">
+      <td>
+        <%= sample.title %>
+      </td>
+      <td>
+        <%= link_to 'Show', sample %>
+      </td>
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+  <%# Link to new sample song %>
+<p><%= link_to 'Add Sample', new_sample_path(ogsong_id: @ogsong) %></p>
+  <%# Link to edit original song %>
+<%= link_to 'Edit', edit_ogsong_path(@ogsong) %>
+  <%# Link to all original songs %>
+<%= link_to 'Back', ogsongs_path %>

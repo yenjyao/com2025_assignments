@@ -1,0 +1,45 @@
+<h1><%= t('.listSample') %></h1>
+<%# Search bar to filter the data %>
+<input id="myInput" type="text" placeholder="Search..">
+<table>
+  <thead>
+    <tr>
+      <th><%= t('.ogsong') %></th>
+      <th><%= t('.title') %></th>
+      <th><%= t('.artist') %></th>
+      <th><%= t('.lyrics') %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody id = "List">
+    <% @samples.each do |sample| %>
+      <tr>
+        <td>
+          <%# Title of original song of the sampled %>
+          <%= sample.ogsong.title %>
+        </td>
+        <td>
+          <%# Title of sampled song %>
+          <%= sample.title %>
+        </td>
+        <td>
+          <%# artist of sampled song %>
+          <%= sample.artist %>
+        </td>
+        <td>
+          <%# lyrics of sampled song %>
+          <%= sample.lyrics %>
+        </td>
+        <%# Link to show the specific song %>
+        <td>
+          <%= link_to 'Show', sample %>
+        </td>
+
+    <% end %>
+
+
+  </tbody>
+</table>
+<br/>

@@ -1,0 +1,96 @@
+#Localised strings
+en:
+  app_title: Music Sampling
+  app_description: A place to find music samples and it's original song as well as contact the producer of that song.
+
+  home:
+    home:
+      title: MusiQue
+      welcome: Welcome to the coursework (click here)
+      about: Website about music sampling. Please sign up if you do not have an account. You will be able to access all of this websites features once logged into your account.
+
+    contact:
+      contact_title: Contact us
+      contact_us: Complete the following form to get in touch with us.
+
+      name: "Name:"
+      enter_name: Enter your name
+      email: "Email:"
+      enter_email: Enter your email address
+      telephone: "Telephone:"
+      enter_telephone: Enter your telephone number
+      message: "Message:"
+      enter_message: What do you want to say?
+      submit: Contact Us
+
+    request_contact:
+      no_email: You must supply an email address
+      email_sent: Thank you. We will be in touch shortly.
+
+  contact_mailer:
+    contact_email:
+      message: "Could you get in touch with me please?"
+      intro: Dear
+      name: "Name:"
+      email: "Email:"
+      tele: "Telephone:"
+      thanks: "Thanks,"
+
+  ogsongs:
+    edit:
+      test: Editing Original Songs
+
+    index:
+      listing_test: Listing Original Songs
+      title: Title
+      artist: Artist
+      lyrics: Lyrics
+
+    new:
+      newOg: New Original Song
+
+    show:
+      title: "Song Title:"
+      artist: "Artist:"
+      lyrics: "Lyrics:"
+      producer: "Producers:"
+      sample: "Samples:"
+
+  producers:
+    edit:
+      edit_test: Editing Producer
+
+    index:
+      list: Listing producers
+      name: Name
+      email: Email
+      tele: Telephone
+
+    new:
+      newPro: New Producer
+
+    show:
+      name: "Name:"
+      email: "Email:"
+      tele: "Telephone:"
+
+  samples:
+    edit:
+      editSample: Editing Sample
+
+    index:
+      listSample: Listing Samples
+      ogsong: Original Song
+      title: Title
+      artist: Artist
+      lyrics: Lyrics
+
+    new:
+      newSample: New Sample
+
+    show:
+      ogsong: "Original Song:"
+      title: "Title:"
+      artist: "Artist:"
+      lyrics: "Lyrics:"
+      producer: "Producers:"

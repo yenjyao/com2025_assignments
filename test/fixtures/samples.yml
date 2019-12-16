@@ -1,0 +1,14 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+#Fixes two different sampled songs
+one:
+  ogsong: one
+  title: MyString
+  artist: MyString
+  lyrics: MyText
+
+two:
+  ogsong: two
+  title: MyString
+  artist: MyString
+  lyrics: MyText

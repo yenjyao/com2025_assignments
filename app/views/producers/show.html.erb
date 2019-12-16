@@ -1,0 +1,48 @@
+<p id="notice">
+  <%= notice %>
+</p>
+  <%# Shows the data entry %>
+<p>
+      <%# Name of producer %>
+  <b><%= t('.name') %></b>
+  <%= @producer.name %>
+</p>
+<p>
+      <%# Email of producer %>
+  <b><%= t('.email') %></b>
+  <%= @producer.email %>
+</p>
+<p>
+      <%# Telephone of producer %>
+  <b><%= t('.tele') %></b>
+  <%= @producer.telephone %>
+</p>
+
+<table>
+  <tbody>
+        <%# Prints all original songs producer has worked on %>
+    <% @producer.ogsongs.each do |ogsong| %>
+    <tr id = "ogsong_<%= ogsong.id %>">
+      <td>
+        <%= ogsong.title %>
+      </td>
+      <td>
+        <%= ogsong.artist %>
+      </td>
+      <td>
+        <%= link_to 'Show', ogsong %>
+      </td>
+      <td>
+        <%= link_to 'Edit', edit_ogsong_path(ogsong) %>
+      </td>
+      <td>
+        <%= link_to 'Destroy', ogsong, :method => :delete, :data => {:confirm => 'Are you sure?'}, :remote => true %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_producer_path(@producer) %>
+
+<%= link_to 'Back', producers_path %>

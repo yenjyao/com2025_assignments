@@ -1,0 +1,12 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+#Fixes two different original songs
+one:
+  title: Feel Good Inc.
+  artist: Gorillaz
+  lyrics: MyText
+
+two:
+  title: VCR
+  artist: The xx
+  lyrics: MyText

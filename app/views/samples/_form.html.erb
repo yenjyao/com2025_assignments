@@ -1,0 +1,45 @@
+<%= form_for @sample do |f| %>
+  <% if @sample.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= "#{pluralize(@sample.errors.count, "error")} prohibited this sample from being saved:" %>
+      </h2>
+      <ul>
+        <% @sample.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%# Form fields to input data entry %>
+  <%# title of the sampled song %>
+  <div class="field">
+    <%= f.label :ogsong %>
+    <p><%= f.hidden_field :ogsong_id, value: @sample.ogsong.id %></p>
+  </div>
+        <%# title of the sampled song %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+      <%# artist of the sampled song %>
+  <div class="field">
+    <%= f.label :artist %>
+    <%= f.text_field :artist %>
+  </div>
+        <%# lyrics of the sampled song %>
+  <div class="field">
+    <%= f.label :lyrics %>
+    <%= f.text_area :lyrics %>
+  </div>
+    <%# Save button %>
+  <div class="actions">
+<%= submit_tag("Save", { :name => 'save', :id => 'save', :type => 'save', :class => 'btn btn-success'}) %>
+  </div>
+      <%# Clears the form fields %>
+  <div id = "reset">
+    <%= submit_tag("Reset", { :name => 'reset', :id => 'reset', :type => 'reset', :class => 'btn btn-default'}) %>
+  </div>
+<% end %>

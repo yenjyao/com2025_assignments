@@ -1,0 +1,43 @@
+  <%# Creates a table of data %>
+<br/>
+<h1><%= t('.listing_test') %></h1>
+  <%# Search bar to filter the data %>
+<input id="myInput" type="text" placeholder="Search..">
+<table>
+  <thead>
+    <tr>
+      <th><%= t('.title') %></th>
+      <th><%= t('.artist') %></th>
+      <th><%= t('.lyrics') %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody id = "List">
+    <% @ogsongs.each do |ogsong| %>
+      <tr>
+        <%# Title of original song %>
+        <td>
+          <%= ogsong.title %>
+        </td>
+        <%# artist of original song %>
+        <td>
+          <%= ogsong.artist %>
+        </td>
+        <%# Lyrics of original song %>
+        <td>
+          <%= ogsong.lyrics %>
+        </td>
+        <%# Link to show the specific song %>
+        <td>
+          <%= link_to 'Show', ogsong %>
+        </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br/>
+<%# Create new original song %>
+<%= link_to 'New Ogsong', new_ogsong_path %>

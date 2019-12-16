@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+#Fixes two different producers
+one:
+  name: Danger Mouse
+  email: dangermouse@email.com
+
+two:
+  name: Rick Rubin
+  email: rickrubin@email.com

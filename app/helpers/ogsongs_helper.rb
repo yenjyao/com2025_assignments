@@ -1,0 +1,2 @@
+module OgsongsHelper
+end

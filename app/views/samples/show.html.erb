@@ -1,0 +1,33 @@
+<br>
+<br>
+  <%# Shows the data entry %>
+<p>
+      <%# Title of original song the sampled song sampled off of %>
+  <b><%= t('.ogsong') %></b>
+  <%= @sample.ogsong.title %>
+</p>
+<p>
+      <%# Title of sampled song %>
+  <b><%= t('.title') %></b>
+  <%= @sample.title %>
+</p>
+<p>
+      <%# Artist of sampled song %>
+  <b><%= t('.artist') %></b>
+  <%= @sample.artist %>
+</p>
+<p>
+      <%# Lyrics of sampled song %>
+  <b><%= t('.lyrics') %></b>
+  <%= @sample.lyrics %>
+</p>
+<p>
+      <%# Prints all producers that contributed to the sampled song %>
+<b><%= t('.producer') %></b>
+<% @sample.producers.each do |producer| %>
+<%= producer.name %>
+<% end %>
+</p>
+<%= link_to 'Edit', edit_sample_path(@sample) %>
+
+<%= link_to 'Back', samples_path %>

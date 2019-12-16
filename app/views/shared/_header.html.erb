@@ -1,0 +1,38 @@
+    <%# Header partial %>
+        <%# Navigation bar containing important links %>
+  <nav id = "links">
+        <%# Website name %>
+  <h1 id = "main">MusiQue</h1>
+      <%# Link to root page %>
+  <%= link_to 'Home', root_path %>|
+      <%# Link to original songs %>
+  <%= link_to 'Original Song', ogsongs_path %>|
+      <%# Link to sample songs %>
+  <%= link_to 'Sample Song', samples_path %>|
+      <%# Link to producers %>
+  <%= link_to 'Producers', producers_path %>|
+      <%# Link to contact page %>
+  <%= link_to 'Contact', contact_path %>
+
+      <%# User Links, log in, sign out, sign up, profile %>
+      <%# If user is signed in, only show username, profile and logout %>
+      <%# Otherwise, only show login and sign up %>
+
+  <div style = "float:right">
+    <% if user_signed_in? %>
+    <%= "#{current_user.username} |" %>
+    <%= link_to t('profile'), edit_user_registration_path %>
+    <%= link_to t('logout'), destroy_user_session_path, method: 'delete' %>
+    <% else  %>
+    <%= link_to t('login'), new_user_session_path %>
+    <%= link_to t('sign_up'), new_user_registration_path %>
+    <% end %>
+  </div>
+
+  </nav>
+
+  <%# Flash notices %> 
+
+<% flash.each do |key, value| %>
+  <%= content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank? %>
+<% end %>

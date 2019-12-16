@@ -1,0 +1,41 @@
+<h1><%= t('.list') %></h1>
+<%# Search bar to filter the data %>
+<input id="myInput" type="text" placeholder="Search..">
+<table>
+  <thead>
+    <tr>
+      <th><%= t('.name') %></th>
+      <th><%= t('.email') %></th>
+      <th><%= t('.tele') %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody id = "List">
+    <% @producers.each do |producer| %>
+      <tr>
+        <td>
+          <%# Name of producer %>
+          <%= producer.name %>
+        </td>
+        <td>
+          <%# Producer email %>
+          <%= producer.email %>
+        </td>
+        <td>
+        <%# Telephone of producer %>
+          <%= producer.telephone %>
+        </td>
+        <%# Link to show the specific producer %>
+        <td>
+          <%= link_to 'Show', producer %>
+        </td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br/>
+<%# Create new producer %>
+<%= link_to 'New Producer', new_producer_path %>

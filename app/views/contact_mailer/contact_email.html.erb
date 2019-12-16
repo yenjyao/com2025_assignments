@@ -1,0 +1,28 @@
+<%# Layout of the email wiith localised string. %>
+<p>
+  <%= t('.intro') %><%= " #{t('app_title')}," %>
+</p>
+<p>
+  <%= t('.message') %>
+</p>
+<dl>
+  <dt><%= t('.name') %></dt>
+  <dd>
+    <%= @name %>
+  </dd>
+  <dt><%= t('.email') %></dt>
+  <dd>
+    <%= @email %>
+  </dd>
+  <dt><%= t('.tele') %></dt>
+  <dd>
+    <%= @telephone %>
+  </dd>
+</dl>
+<p>
+  <%= @message %>
+</p>
+<p><%= t('.thanks') %></p>
+<p>
+  <%= @name %>
+</p>
